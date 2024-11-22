@@ -92,15 +92,15 @@ Las siguientes deben tomarse como especificaciones del programa a desarrollar:
 
 Separe el diseño de su clase Racional en dos ficheros, racional.h y racional.cc conteniendo respectivamente la declaración y la definición de la clase.
 La clase Racional incluirá al menos métodos para:
-Crear objetos de tipo Racional. Se debe implementar un constructor por defecto y uno parametrizado.
-Escribir (a fichero o a pantalla) un objeto de tipo Racional.
-Leer (por teclado o desde fichero) un objeto de tipo Racional.
-Sumar dos objetos de tipo Racional.
-Restar dos objetos de tipo Racional.
-Multiplicar dos objetos de tipo Racional.
-Dividir dos objetos de tipo Racional.
-Comparar objetos de tipo Racional.
-El programa ha de permitir leer un fichero de texto en el que figuran pares de números racionales separados por espacios de la forma:
+* Crear objetos de tipo Racional. Se debe implementar un constructor por defecto y uno parametrizado.
+* Escribir (a fichero o a pantalla) un objeto de tipo Racional.
+* Leer (por teclado o desde fichero) un objeto de tipo Racional.
+* Sumar dos objetos de tipo Racional.
+* Restar dos objetos de tipo Racional.
+* Multiplicar dos objetos de tipo Racional.
+* Dividir dos objetos de tipo Racional.
+* Comparar objetos de tipo Racional.
+* El programa ha de permitir leer un fichero de texto en el que figuran pares de números racionales separados por espacios de la forma:
 a/b c/d
 
 e/f g/h
@@ -113,7 +113,7 @@ e/f g/h
 
   ...
 
-# Si el programa se ejecuta sin pasar parámetros en la línea de comandos, debemos obtener el siguiente mensaje:
+### Si el programa se ejecuta sin pasar parámetros en la línea de comandos, debemos obtener el siguiente mensaje:
 
 ./racionales -- Números Racionales
 
@@ -132,7 +132,10 @@ fichero_entrada: Fichero de texto conteniendo líneas con un par de números rac
 
 fichero_salida:  Fichero de texto que contendrá líneas con las operaciones realizadas: `a/b + c/d = n/m`
 
-Descargue y estudie el problema Robot Simulator de Exercism y lea también el enunciado del problema siguiente (número 4) de esta relación. El propósito de estudiar el problema de Exercism antes de resolver éste es que utilice aquí los mismos identificadores para los métodos que necesite que los que utilizará en el problema siguiente (4). Teniendo en mente ese problema de Exercism (Robot Simulator), diseñe una solución orientada a objetos para el problema Movements on the ground de Jutge. Suba el problema a Jutge para su evaluación.
+# Robot Simulator.
+
+Descargue y estudie el problema [Robot Simulator de Exercism](https://exercism.org/tracks/cpp/exercises/robot-simulator) Teniendo en mente ese problema de Exercism (Robot Simulator), diseñe una solución orientada a objetos para el problema [Movements on the ground de Jutge](https://jutge.org/problems/P79784_en). Suba el problema a Jutge para su evaluación.
+
 Su programa deberá basarse en una clase Robot a la que dotará de la funcionalidad necesaria para resolver el problema de Jutge. Para que Jutge evalúe su solución tendrá que (contrariamente a lo habitual) escribir todo su código en un único fichero. Incluya en un fichero robot_simulator_jutge.cc tanto el código de la clase Robot como la función main() que instancia un objeto robot.
 
 El código de la función main() podría ser similar a este:
@@ -165,7 +168,13 @@ El código de la función main() podría ser similar a este:
 
 14 }
 
-En la función main() se declara (línea 5) un objeto robot que se inicializa con una posición (position) y una orientación (bearing) que han sido definidas anteriormente (líneas 3 y 4). Para trabajar con las posiciones se utiliza un objeto position que se define en la clase std::pair de la STL y que en este caso se utiliza para almacenar un par de números enteros, que definen la posición del robot. Los ejemplos de este tutorial de Geeksforgeeks pueden servirle de ejemplo para iniciarse en el estudio de std::pair. Al revisar ese tutorial y reproducir sus ejemplos, ¡tenga en cuenta las consideraciones de estilo que se usan en Informática Básica!.
+En la función main() se declara (línea 5) un objeto robot que se inicializa con una posición (position) y una orientación (bearing) que han sido definidas anteriormente (líneas 3 y 4).
+
+Para trabajar con las posiciones se utiliza un objeto position que se define en la clase std::pair de la STL y que en este caso se utiliza para almacenar un par de números enteros, que definen la posición del robot.
+
+Los ejemplos de este tutorial de Geeksforgeeks pueden servirle de ejemplo para iniciarse en el estudio de std::pair.
+
+Al revisar ese tutorial y reproducir sus ejemplos, ¡tenga en cuenta las consideraciones de estilo que se usan en Informática Básica!.
 
 Las orientaciones que utiliza el robot (norte, sur, este, oeste) se definen en el programa en una clase Bearing cuya definición es la siguiente:
 
@@ -185,7 +194,8 @@ Es decir, se trata de una clase que simplemente define una enumeración con los 
 
 La función main() anterior lee una secuencia de movimientos (línea 7) y en el bucle for de la línea 8 hace que el robot ejecute cada uno de los movimientos de la secuencia. Al final del bucle (línea 12) se imprime la posición final del robot.
 
-Realice un programa orientado a objetos que resuelva el ejercicio Robot Simulator de Exercism. Consiga que su solución pase todos los tests y envíe su solución a la plataforma. Si estudia el fichero robot_simulator_test.cpp de tests del problema observará que la clase Robot a diseñar ha de contener al menos los métodos:
+Realice un programa orientado a objetos que resuelva el ejercicio Robot Simulator de Exercism. Consiga que su solución pase todos los tests y envíe su solución a la plataforma.
+Si estudia el fichero robot_simulator_test.cpp de tests del problema observará que la clase Robot a diseñar ha de contener al menos los métodos:
 get_bearing()
 get_position()
 turn_right()
@@ -202,7 +212,10 @@ Continúe añadiendo el código necesario en robot_simulator.cpp y robot_simulat
 
 Recuerde que la estrategia a seguir en la solución del problema consiste en ir "desbloqueando" progresivamente los distintos tests que ha de pasar el programa.
 
-5.- La realización de este ejercicio es opcional. Se recomienda realizarlo a aquél alumnado que considere que ha realizado progresos significativos en cuanto a su capacidad de realizar programas cada vez más complejos en C++.
+
+# La realización de este ejercicio es opcional.
+
+Se recomienda realizarlo a aquél alumnado que considere que ha realizado progresos significativos en cuanto a su capacidad de realizar programas cada vez más complejos en C++.
 
 Crearemos una clase llamada Serie con las siguientes características:
 Sus atributos son título, número de temporadas, entrega, genero y creador.

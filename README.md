@@ -1,51 +1,68 @@
-# P13-OOP
-Práctica 13. Programación Orientada a Objetos.
+# Práctica 13. Programación Orientada a Objetos
 
-#Factor de ponderación: 10
+# Factor de ponderación: 10
 
-#Objetivos
+### Objetivos
+
 Los objetivos de esta práctica son que el alumnado:
 - Desarrolle programas sencillos en C++ utilizando programación orientada a objetos, así como todas las características del lenguaje estudiadas anteriormente
 - Aprenda a sobrecargar operadores en C++
 - Ponga en práctica diferentes formas de relacionar clases en C++
-- Rúbrica de evaluación de esta práctica
-- Se señalan a continuación los aspectos más relevantes (la lista no es exhaustiva) que se tendrán en cuenta a la hora de evaluar esta práctica. Se comprobará que el alumnado:
 
-Conoce los conceptos expuestos en el material de referencia de esta práctica.
-Ha realizado todos los ejercicios propuestos en este enunciado
-Es capaz de escribir programas simples en C++ que resuelvan problemas de complejidad similar a los que se proponen en este documento
-Sabe cómo implementar la sobrecarga de diferentes tipos de operadores en los programas que desarrolle
-Es capaz de escribir programas orientados a objetos que involucren a diferentes clases con diversas formas de relación entre las mismas
-Sea capaz de utilizar VSC para editar y compilar programas de forma remota en su Máquina Virtual
-Conoce la plataforma Exercism y es capaz de descargar y realizar problemas sencillos interaccionando con ella.
-Es capaz de escribir un fichero CMakeLists.txt para automatizar el proceso de compilación de sus programas con cmake y make
-Ha automatizado la compilación de sus programas usando un fichero Makefile para cada uno de los programas que desarrolle
-Hace que sus programas se estructuren en torno a diferentes funciones (sean modulares)
-Todos sus programas se estructuran en directorios diferentes para cada "proyecto" haciendo que cada uno de ellos contenga un fichero CMakeLists.txt con la configuración de despliegue del proyecto.
-Utiliza en todos sus programas comentarios adecuados en el formato requerido por Doxygen
-Acredita que todas las prácticas realizadas hasta la fecha se encuentran alojadas en repositorios privados de GitHub.
-Acredita que es capaz de subir programas a la plataforma Jutge para su evaluación
-Ha incluido un comentario prólogo en todos los ficheros (*.cc, *.h) de sus ejercicios
-Que todos los programas que desarrolla, antes de su ejecución imprimen en pantalla un mensaje indicando la finalidad del programa así como la información que precisará del usuario para su correcta ejecución.
-Hace que todos los programas que se presentan para su evaluación cumplan con los estándares definidos en la Guía de estilo de Google para C++
-Utiliza siempre identificadores significativos en su programa (para constantes, variables, etc.) y no utiliza nunca identificadores de una única letra, tal vez con la excepción de las variables que utilice para iterar en un bucle.
-Acredita que es capaz de editar ficheros remotos en su VM usando vi
-Ha realizado todos sus ejercicios en la máquina virtual Ubuntu de la asignatura.
-Demuestra que es capaz de ejecutar comandos Linux en su VM
+
+### Rúbrica de evaluación de esta práctica
+Se señalan a continuación los aspectos más relevantes (la lista no es exhaustiva) que se tendrán en cuenta a la hora de evaluar esta práctica. Se comprobará que el alumnado:
+
+* Conoce los conceptos expuestos en el material de referencia de esta práctica.
+* Ha realizado todos los ejercicios propuestos en este enunciado
+* Es capaz de escribir programas simples en C++ que resuelvan problemas de complejidad similar a los que se proponen en este documento
+* Sea capaz de utilizar VSC para editar y compilar programas de forma remota en su Máquina Virtual
+* Conoce la plataforma Exercism y es capaz de descargar y realizar problemas sencillos interaccionando con ella.
+* Es capaz de escribir un fichero `CMakeLists.txt` para automatizar el proceso de compilación de sus programas con `cmake` y `make`
+* Ha automatizado la compilación de sus programas usando un fichero `Makefile` para cada uno de los programas que desarrolle
+* Hace que sus programas se estructuren en torno a diferentes funciones (sean modulares)
+* Todos sus programas se estructuran en directorios diferentes para cada "proyecto" haciendo que cada uno de
+  ellos contenga un fichero `CMakeLists.txt` con la configuración de despliegue del proyecto.
+* Utiliza en todos sus programas comentarios adecuados en el formato requerido por
+[Doxygen](https://www.doxygen.nl/index.html)
+* Acredita que todas las prácticas realizadas hasta la fecha se encuentran alojadas en repositorios privados de
+[GitHub](https://github.com/).
+* Acredita que es capaz de subir programas a la plataforma
+[Jutge](https://jutge.org/)
+para su evaluación
+* Ha incluido un comentario prólogo en todos los ficheros (`*.cc`, `*.h`) de sus ejercicios
+* Que todos los programas que desarrolla, antes de su ejecución imprimen en pantalla un mensaje indicando la
+  finalidad del programa así como la información que precisará del usuario para su correcta ejecución.
+* Hace que todos los programas que se presentan para su evaluación cumplan con los estándares definidos en la
+[Guía de estilo de Google para C++](https://google.github.io/styleguide/cppguide.html)
+* Utiliza siempre identificadores significativos en su programa (para constantes, variables, etc.) y
+  no utiliza nunca identificadores de una única letra, tal vez con la excepción de las variables que utilice para iterar en un bucle.
+* Acredita que es capaz de editar ficheros remotos en su VM usando vi
+* Ha realizado todos sus ejercicios en la máquina virtual Ubuntu de la asignatura.
+* Demuestra que es capaz de ejecutar comandos Linux en su VM
+
 
 # Ejercicios
 Al realizar los ejercicios cree dentro de su repositorio de esta práctica un directorio diferente para cada uno de los ejercicios. Asigne a cada uno de esos directorios nombres significativos.
+
 Automatice la compilación del programa correspondiente a cada ejercicio con un fichero Makefile independiente para cada programa e inclúyalo en el correspondiente directorio. Alternativamente podría también usarse cmake con un fichero CMakeLists, si se prefiere.
+
 Haga que todos los programas tomen su entrada por la línea de comandos y en caso de que se ejecuten sin pasarles el número adecuado de parámetros impriman en pantalla un mensaje indicando el modo correcto de ejecutar el programa.
-El código de cada uno de los programas deberá organizarse de forma modular, es decir haciendo uso de funciones.
-Cada función deberá realizar una única tarea y hacerlo correctamente.
-El identificador de una función debe reflejar claramente la finalidad de la función.
+
+El código de cada uno de los programas deberá organizarse de forma modular, es decir haciendo uso de funciones. Cada función deberá realizar una única tarea y hacerlo correctamente. El identificador de una función debe reflejar claramente la finalidad de la función.
+
 Desarrolle una clase ComputeInt que permita la realización de diferentes cálculos con números enteros. Incluya al menos los siguientes métodos en la clase:
+
 Factorial que permita calcular el factorial de un número (Problema Factorial de Jutge).
+
 SumSerie que calcule la suma de los primeros n términos de la serie: 1 + 2 + 3 + ... + n.
+
 IsPrime que permita determinar si un determinado número es primo (Problema Primality de Jutge).
+
 IsPerfectPrime que permita determinar si un determinado número es un primo perfecto (Problema Perfect primes de Jutge).
+
 AreRelativePrimes que permita determinar si dos números son mutuamente primos, es decir, si su único divisor común es el 1
+
 La función main del programa que usara esta clase podría contener, entre otras, sentencias similares a las siguientes:
 
 main() {
